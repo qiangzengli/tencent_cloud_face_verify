@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '11.0'
+platform :ios, '12.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
@@ -34,7 +34,7 @@ target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   
   # 添加资源包
-  pod 'TencentCloudHuiyanSDKFace_framework', :path => '../Framework/TencentCloudHuiyanSDKFace_framework'
+#   pod 'TencentCloudHuiyanSDKFace_framework', :path => '../Framework/TencentCloudHuiyanSDKFace_framework'
   
   target 'RunnerTests' do
     inherit! :search_paths
@@ -50,8 +50,8 @@ post_install do |installer|
       target.build_phases.each do |build_phase|
         if build_phase.respond_to?(:name) && build_phase.name == "Copy Bundle Resources"
           # 添加资源包
-          build_phase.add_file_reference(installer.pods_project.new_file("../Framework/TencentCloudHuiyanSDKFace_framework/Resources/TencentCloudHuiyanSDKFace.bundle"))
-          build_phase.add_file_reference(installer.pods_project.new_file("../Framework/TencentCloudHuiyanSDKFace_framework/Resources/face-tracker-v003.bundle"))
+#           build_phase.add_file_reference(installer.pods_project.new_file("../Framework/TencentCloudHuiyanSDKFace_framework/Resources/TencentCloudHuiyanSDKFace.bundle"))
+#           build_phase.add_file_reference(installer.pods_project.new_file("../Framework/TencentCloudHuiyanSDKFace_framework/Resources/face-tracker-v003.bundle"))
         end
       end
     end

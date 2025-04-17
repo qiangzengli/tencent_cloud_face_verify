@@ -17,7 +17,11 @@ A new Flutter plugin project.
   #.framework文件路径
   s.vendored_frameworks = 'Framework/TencentCloudHuiyanSDKFace_framework/Libs/*framework'
   #.bundle资源文件路径
-   s.ios.resource = 'Framework/TencentCloudHuiyanSDKFace_framework/Resources/*.bundle'
+  # 推荐方式 - 创建独立的资源bundle
+#    s.resource_bundles = {
+#      'TencentCloudFaceVerifyPluginResources' => ['Framework/TencentCloudHuiyanSDKFace_framework/Resources/*bundle']
+    }
+  s.ios.resource = 'Framework/TencentCloudHuiyanSDKFace_framework/Resources/*bundle'
 #   s.resource = ['Framework/TencentCloudHuiyanSDKFace_framework/Resources/*.bundle']
 #   s.resource_bundles ='Framework/TencentCloudHuiyanSDKFace_framework/Resources/*.bundle'
 # s.resource_bundles = {
@@ -55,5 +59,5 @@ A new Flutter plugin project.
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'tencent_cloud_face_verify_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+#  s.resource_bundles = {'tencent_cloud_face_verify_privacy' => ['Framework/Resources/PrivacyInfo.xcprivacy']}
 end

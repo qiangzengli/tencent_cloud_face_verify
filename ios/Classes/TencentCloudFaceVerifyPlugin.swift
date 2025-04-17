@@ -27,11 +27,18 @@ public class TencentCloudFaceVerifyPlugin: NSObject, FlutterPlugin {
             config.theme = WBFaceVerifyTheme.lightness
             config.language = WBFaceVerifyLanguage.ZH_CN
        
-//            config.bundlePath="Framework/TencentCloudHuiyanSDKFace_framework/Resources/"
+            
+            // 设置 bundlePath
+             if let bundlePath = Bundle(for: TencentCloudFaceVerifyPlugin.self).path(forResource: "TencentCloudHuiyanSDKFace", ofType: "bundle") {
+                 config.bundlePath = (bundlePath as NSString).deletingLastPathComponent
+                 print("Successfully set bundlePath: \(config.bundlePath)")
+             }
     
             WBFaceVerifyCustomerService.sharedInstance().initSDK(withUserId: userId, nonce: nonce, sign: sign, appid: appId, orderNo: orderNo, apiVersion: apiVersion, licence: licence, faceId: faceId,sdkConfig: config) {
                 
-                WBFaceVerifyCustomerService.sharedInstance().startWbFaceVeirifySdk()
+                      DispatchQueue.main.async {
+                    WBFaceVerifyCustomerService.sharedInstance().startWbFaceVeirifySdk()
+                }
                 
             } failure: { WBFaceError in
                 
