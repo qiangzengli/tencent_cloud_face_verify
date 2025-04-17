@@ -1,0 +1,1 @@
+#import <TencentCloudHuiyanSDKFace/WBFaceVerifyCustomerService.h>

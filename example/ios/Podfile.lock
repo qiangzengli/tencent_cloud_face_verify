@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - tencent_cloud_face_verify (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - tencent_cloud_face_verify (from `.symlinks/plugins/tencent_cloud_face_verify/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  tencent_cloud_face_verify:
+    :path: ".symlinks/plugins/tencent_cloud_face_verify/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
+  tencent_cloud_face_verify: b30df03c21d33d4e42e31cfaf789c48a802e43b5
+
+PODFILE CHECKSUM: 025a53ae444f3acffa375c6b2b3733e89af7c43a
+
+COCOAPODS: 1.16.2
