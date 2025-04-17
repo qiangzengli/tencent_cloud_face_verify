@@ -27,7 +27,7 @@ abstract class TencentCloudFaceVerifyPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<void> launchVerify({
+  Future<Map<Object?, Object?>> launchVerify({
     required String userId,
     required String sign,
     required String appId,
